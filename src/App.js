@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
   import './App.css';
+  import PropTypes from "prop-types";
 
 /*images*/
 import searchIcon from "./assets/search.jpg"
@@ -138,6 +139,16 @@ function App() {
    useEffect(function (){
     search()
    },[])
+   Weatherdetails.propTypes={
+    icon:PropTypes.string.isRequired,
+    temp:PropTypes.number.isRequired,
+    city:PropTypes.string.isRequired,
+    country:PropTypes.string.isRequired,
+    humidity:PropTypes.number.isRequired,
+    wind:PropTypes.number.isRequired,
+    lat:PropTypes.number.isRequired,
+    long:PropTypes.number.isRequired,
+   }
   
 
   return (
